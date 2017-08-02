@@ -1,0 +1,14 @@
+{
+	"name": "URNames",
+	"version": "1.0",
+	"author": "Josef Martiňák",
+	"description": "Extension displays the real names of wiki users in RecentChanges, PageHistory\r\n\t\tand users' lists. Logged in users can see the real name in the brackets after username.",
+	"type": "specialpage",
+	"AutoloadClasses": {
+		"URNamesHooks": "URNamesHooks.php"
+	},
+	"Hooks": {
+		"BeforePageDisplay": "URNamesHooks::replaceUserNames"
+	},
+	"manifest_version": 1
+}
