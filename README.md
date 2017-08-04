@@ -4,6 +4,8 @@ Mediawiki extension.
 
 ## Description
 
+Version 1.0
+
 Extension adds users' real name (only for logged in users) to following pages:
 * History pages
 * Recentchanges
@@ -12,7 +14,7 @@ Extension adds users' real name (only for logged in users) to following pages:
 * BlockList
 
 
-## Instalation
+## Installation
 
 * Make sure you have MediaWiki 1.28 installed.
 * Download and place the extension's folder to your /extensions/ folder.
