@@ -81,8 +81,13 @@ class URNamesHooks {
 		$pagename = '';
 	
 		if( $title->isSpecialPage() ) {
-			$tmp = SpecialPageFactory::resolveAlias( $title->getBaseText() );
-			$pagename = $tmp[0];
+			$spList = ['Recentchanges', 'Activeusers', 'BlockList', 'Listusers'];
+			foreach($spList as $sp) {
+			    if($title->getBaseTitle() == SpecialPage::getTitleFor($sp)->getBaseTitle()) {
+				$pagename = $sp;
+				break;
+			    }
+			}
 		}
 		elseif( isset( $query['action'] ) && $query['action'] == 'history' ) {
 			$pagename = 'history';
