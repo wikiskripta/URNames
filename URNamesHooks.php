@@ -72,7 +72,7 @@ class URNamesHooks {
 
 		$user = $out->getUser();
 		$query = $out->getRequest()->getQueryValues();
-			if( !$user->isLoggedIn() ) {
+			if( !$user->isRegistered() ) {
 			// user is not logged - no action
 			return true;
 		}

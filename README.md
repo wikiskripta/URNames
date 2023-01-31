@@ -4,7 +4,7 @@ Mediawiki extension.
 
 ## Description
 
-Version 1.1.1
+Version 1.1.2
 
 Extension adds users' real name (only for logged in users) to following pages:
 
@@ -25,7 +25,10 @@ Extension adds users' real name (only for logged in users) to following pages:
 ### 1.1.1
 * Static SpecialPageFactory deprecated. Fix for MW 1.36.
 
+### 1.1.2
+* `$user->isLoggedIn()` deprecated. Replaced with `$user->isRegistered()`. Fix for MW 1.39.
+
 ## Authors and license
 
 * [Josef Martiňák](https://www.wikiskripta.eu/w/User:Josmart)
-* MIT License, Copyright (c) 2021 First Faculty of Medicine, Charles University
+* MIT License, Copyright (c) 2022 First Faculty of Medicine, Charles University
