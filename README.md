@@ -16,7 +16,7 @@ Extension adds users' real name (only for logged in users) to following pages:
 
 ## Installation
 
-* Make sure you have MediaWiki 1.29+ installed.
+* Make sure you have MediaWiki 1.39+ installed.
 * Download and place the extension to your /extensions/ folder.
 * Add the following code to your LocalSettings.php: `wfLoadExtension( 'URNames' )`;
 
