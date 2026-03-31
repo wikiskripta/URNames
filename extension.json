@@ -1,20 +1,41 @@
 {
-	"name": "URNames",
-	"version": "1.1.2",
-	"author": "[https://www.wikiskripta.eu/w/User:Josmart Josef Martiňák]",
-	"url": "https://bitbucket.org/wikiskripta/urnames",
-	"description": "Extension displays the real names of wiki users in RecentChanges, PageHistory\r\n\t\tand users' lists. Logged in users can see the real name in the brackets after username.",
-	"type": "other",
-	"license-name": "MIT",
-	"status": "stable",
-	"requires": {
-		"MediaWiki": ">= 1.39.0"
-	},
-	"AutoloadClasses": {
-		"URNamesHooks": "URNamesHooks.php"
-	},
-	"Hooks": {
-		"BeforePageDisplay": "URNamesHooks::replaceUserNames"
-	},
-	"manifest_version": 2
+  "name": "URNames",
+  "version": "2.0.0",
+  "author": [
+    "[https://www.wikiskripta.eu/w/User:Josmart Josef Martiňák]"
+  ],
+  "url": "https://github.com/wikiskripta/URNames",
+  "descriptionmsg": "urnames-desc",
+  "type": "other",
+  "license-name": "MIT",
+  "status": "stable",
+  "requires": {
+    "MediaWiki": ">= 1.45.0"
+  },
+  "manifest_version": 2,
+  "AutoloadNamespaces": {
+    "MediaWiki\\Extension\\URNames\\": "includes/"
+  },
+  "Hooks": {
+    "MediaWikiServices": "MediaWiki\\Extension\\URNames\\Hooks::onMediaWikiServices"
+  },
+  "MessagesDirs": {
+    "URNames": [
+      "i18n"
+    ]
+  },
+  "config": {
+    "URNamesPages": {
+      "value": [
+        "Recentchanges",
+        "Activeusers",
+        "BlockList",
+        "Listusers",
+        "history"
+      ]
+    },
+    "URNamesCacheTTL": {
+      "value": 86400
+    }
+  }
 }
